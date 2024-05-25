@@ -2,6 +2,7 @@ package sn.mfdev.authapi.entities;
 
 
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Table(name = "users")
 @Entity
+@AllArgsConstructor @NoArgsConstructor @Getter @Setter @Builder
 public class User implements UserDetails {
 
     @Id
